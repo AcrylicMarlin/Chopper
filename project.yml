@@ -1,0 +1,19 @@
+parameters: {}
+environment: {}
+packages:
+    - name: chopper
+      shared: false
+      environment: {}
+      parameters: {}
+      annotations: {}
+      functions:
+        - name: startup
+          binary: false
+          main: "chopper/main.py"
+          runtime: python:default
+          web: true
+          webSecure: false
+          parameters: {}
+          environment: {}
+          annotations: {}
+          limits: {}
