@@ -45,6 +45,11 @@ class Chopper(commands.Bot):
 
         try:
             async with self:
+                token = ''
+                try:
+                    token = os.getenv("TOKEN")
+                except TypeError:
+                    token = os.environ["TOKEN"]
                 await self.start(os.getenv("TOKEN"))
 
         except KeyboardInterrupt:
