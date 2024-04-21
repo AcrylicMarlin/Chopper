@@ -50,7 +50,7 @@ class Chopper(commands.Bot):
                     token = os.getenv("TOKEN")
                 except TypeError:
                     token = os.environ["TOKEN"]
-                await self.start(os.getenv("TOKEN"))
+                await self.start(token)
 
         except KeyboardInterrupt:
             await self.close()
