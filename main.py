@@ -1,4 +1,6 @@
 import asyncio
+import os
+import platform
 
 import discord
 
@@ -13,4 +15,6 @@ activity = discord.Activity(name = 'One Piece!', type = discord.ActivityType.str
 client = Chopper(intents=intents, status=status, activity=activity)
 
 if __name__ == "__main__":
+    if platform.system() == "Linux":
+        print(os.getpid())
     asyncio.run(client.run())
