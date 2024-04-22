@@ -16,5 +16,6 @@ client = Chopper(intents=intents, status=status, activity=activity)
 
 if __name__ == "__main__":
     if platform.system() == "Linux":
-        print(os.getpid())
+        with open("pid.txt", "w") as f:
+            f.write(str(os.getpid()))
     asyncio.run(client.run())
